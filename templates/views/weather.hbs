@@ -98,7 +98,7 @@
             }
             else{
              try {
-                const response = await fetch(`http://localhost:3000/weather/get?${queryString}`);
+                const response = await fetch(`/weather/get?${queryString}`);
                 const puzzle = await response.json();
                 if(puzzle.code){
                     elem.classList.remove("alert-success");
