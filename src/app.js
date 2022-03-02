@@ -30,7 +30,7 @@ app.get("/about", (req, res) => {
     html: "About",
     title: "Weather.js",
     content:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows",
+      "This site was created by Haekal Alexander Dinova as his first express.js app, this is not a real app but it's a proof that he really commit a change on his life",
   });
 });
 
