@@ -11,11 +11,16 @@ const forecast = (address) => {
         const { code, info } = response.body.error;
         reject({ ...response.body.error, desc: `[ERROR-${code}]: ${info} ` });
       } else {
-        const { weather_descriptions, temperature, feelslike } =
-          response.body.current;
+        const {
+          weather_descriptions,
+          temperature,
+          feelslike,
+          cloudcover,
+          humidity,
+        } = response.body.current;
         resolve({
           ...response.body.current,
-          desc: `it's ${weather_descriptions[0]}. It's currently ${temperature} K degress out. it feels like ${feelslike} K degress out`,
+          desc: `it's ${weather_descriptions[0]}. It's currently ${temperature} K degress out. it feels like ${feelslike} K degress out. Cloud is covering ${cloudcover}% of the sky. The humidity is ${humidity} `,
         });
       }
     });
